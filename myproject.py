@@ -4,7 +4,7 @@ Created on Sat Feb  1 00:29:17 2025
 
 @author: pc city
 """
-
+#Kamran_Rostami_FanvariCo_Final_procet
 
 class Device:
     def __init__(self,topic,mqtt_broker='localhost',port=1883):
