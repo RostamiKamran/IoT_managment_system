@@ -254,8 +254,6 @@ class AdminPanel:
 
         
 
-
-
 a1=AdminPanel()
 
 a1.create_group('living_room')
