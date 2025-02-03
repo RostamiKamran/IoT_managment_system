@@ -1,8 +1,14 @@
-"""
-Created on Sat Feb  1 00:29:17 2025
+'''
+APM:
 
-@author: pc city
-"""
+injaro ezafe kardam agar soal dashtid inja benevisid, moafagh bashid
+
+
+
+
+'''
+
+
 #Kamran_Rostami_FanvariCo_Final_procet
 
 class Device:
