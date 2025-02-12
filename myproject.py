@@ -211,35 +211,60 @@ class AdminPanel:
         
         
 
-    def turn_on_all_in_group(self,group_name):
-        devices=self.devices_ingroups(group_name)
+   def turn_on_all_in_group(self,group_name):
+       #here
+        devices=self.get_devices_in_group(group_name)
         for device in devices:
-            device.turn_one()
-            #need a print
+            device.turn_on()
+            print("all devicess turned on")
             
             
             
     def turn_off_all_in_group(self,group_name):
-        
+            def turn_off_all_in_group(self,group_name):
+                #here
+        devices=self.get_devices_in_group(group_name)
+        for device in devices:
+            device.turn_on()
+            print("all devicess turned off")
         ''' hameye cheragh haye yek goroh ra khamosh konad'''
         
-        pass
+
         
+
+        #here
     def trun_on_all(self):
+        for group in self.groups.values():
+            for device in group:
+                device.turn_on()
+                
         '''hameye device haro roshan kone'''
-        pass
+        
         
     def turn_off_all(self):
+        for group in self.groups.values():
+            for device in group:
+                device.turn_off()
         '''hameye devcie haro khamosh kone'''
-        pass
+        
+        
+        #here
         
     def get_status_in_group(self,group_name):
+        devices = self.get_devices_in_group(group_name)
+        status = []
+        for device in devices:
+            status.append(f"{device.topic.split('/')[-1]} {device.get_status()}")
         
-        '''living_room y matn print mikone mige lamp1 on , klamp2 off , lamp3 ,..'''
-        pass
-    def get_status_in_device_type(self,device_type):
         
-        ''' device=lamps --> tamame lamp haro status mohem nabashe tooye living rome kojas'''
+     def get_status_in_device_type(self,device_type):
+        status = []
+        for group in self.groups.values():
+            for device in group:
+                if device_type in device.topic:
+                    status.append(f"{device.topic}: {device.get_status()}")
+                    
+        return "\n".join(status)
         pass
     def create_sensor(self) :
     #bar asase clASS SENSOR argument bzarid
