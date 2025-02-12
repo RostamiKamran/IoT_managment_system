@@ -221,8 +221,7 @@ class AdminPanel:
             
             
     def turn_off_all_in_group(self,group_name):
-            def turn_off_all_in_group(self,group_name):
-                #here
+           #HERE
         devices=self.get_devices_in_group(group_name)
         for device in devices:
             device.turn_on()
@@ -265,7 +264,7 @@ class AdminPanel:
                     status.append(f"{device.topic}: {device.get_status()}")
                     
         return "\n".join(status)
-        pass
+        
     def create_sensor(self) :
     #bar asase clASS SENSOR argument bzarid
         pass
