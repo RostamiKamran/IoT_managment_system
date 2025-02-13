@@ -272,6 +272,7 @@ class AdminPanel:
     
     
     def get_status_sensor_in_group(self,group_name):
+
         
         '''
         
